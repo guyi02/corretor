@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nação Imóveis - seu site de corretor na baixada santista</title>
+    <base href="/">
+    <!-- Style CSS -->
+    <link rel="stylesheet" type='text/css'  href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  
+</head>
+<body>
+
+
+<!-- ##### Header Area Start ##### -->
+<header class="header-area">
+
+    <!-- Top Header Area -->
+    <div class="top-header-area">
+        <div class="h-100 d-md-flex justify-content-between align-items-center">
+            <div class="email-address">
+                <a href="mailto:contato@meuemail.com">contato@meuemail.com</a>
+            </div>
+            <div class="phone-number d-flex">
+                <div class="icon">
+                    <img src="/assets/img/icons/whats.png" alt="">
+                </div>
+                <div class="number">
+                    <a href="https://api.whatsapp.com/send?phone=5513988844019&text=Olá amigo, encontrei seu contato através de seu site!"
+                        target="_blank">(13) 9-8884-4019</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Area -->
+    <div class="main-header-area" id="stickyHeader">
+        <div class="classy-nav-container breakpoint-off">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar justify-content-between" id="southNav">
+
+                <!-- Logo -->
+                <a class="nav-brand" href="/"><img src="/assets/img/core-img/nacao-logo-2.png" width="120" alt=""></a>
+
+                <!-- Navbar Toggler -->
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+
+                <!-- Menu -->
+                <div class="classy-menu">
+
+                    <!-- close btn -->
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+
+                    <!-- Nav Start -->
+                    <div class="classynav">
+                        <ul>
+                            <li><a routerLink="/">Home</a></li>
+                            <li><a href="/catalogo">Catálogo</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                        </ul>
+                    </div>
+                    <!-- Nav End -->
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<!-- ##### Header Area End ##### -->
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img" style="background-image: url(/assets/img/bg-img/hero1.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <div class="hero-slides-content">
+                                <h2 data-animation="fadeInUp" data-delay="100ms">Temos o imóvel ideal para você</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide bg-img" style="background-image: url(/assets/img/bg-img/hero2.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <div class="hero-slides-content">
+                                <h2 data-animation="fadeInUp" data-delay="100ms">Encontre o imóvel de seus sonhos</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ##### Hero Area End ##### -->
+
+<!-- ##### Featured Properties Area Start ##### -->
+<section class="featured-properties-area section-padding-100-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading wow fadeInUp">
+                    <h2>Destaques</h2>
+                    <p>Confira abaixo alguns destaques que separamos para você.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+          
+          {{#each imoveis}}
+               <!-- Single Featured Property -->
+            <div class="col-12 col-md-6 col-xl-4 card-imovel">
+                <a href="/imovel/{{this.id}}">
+                <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="100ms">
+                    <!-- Property Thumbnail -->
+                    <div class="property-thumb">
+                        <img src="{{this.imagemCapa}}" alt="">
+
+                        <div class="tag">
+                            <span>{{this.locacao}}</span>
+                        </div>
+                        <div class="list-price">
+                            <p>R$ {{this.valor}}</p>
+                        </div>
+                    </div>
+                    <!-- Property Content -->
+                    <div class="property-content">
+                        <h5>{{this.titulo}}</h5>
+                        <p class="location"><img src="/assets/img/icons/home3.png" alt="">{{this.localidade}}</p>
+                        <p class="location"><img src="/assets/img/icons/dormitorios.png" alt="">Dorm. {{this.quartos}}</p>
+                        <p>{{{truncate "30" this.descricao}}}</p>
+                        <div class="property-meta-data d-flex align-items-end justify-content-between">
+                            <div class="space">
+                                <img src="/assets/img/icons/space.png" alt="">
+                                <span>{{this.dimensoes}}</span>
+                            </div>
+                            <div class="bathroom">
+                                <img src="/assets/img/icons/bathtub.png" alt="">
+                                <span>{{this.banheiros}}</span>
+                            </div>
+                            <div class="garage">
+                                <img src="/assets/img/icons/garage.png" alt="">
+                                <span>{{this.garagens}}</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+           {{/each}}
+          
+        </div>
+    </div>
+
+    <div class="section-heading wow fadeInUp">
+        <h2>Ver mais</h2>
+        <p><a href="/catalogo">Clique aqui para para ver o catálogo completo</a></p>
+    </div>
+    
+</section>
+<!-- ##### Featured Properties Area End ##### -->
+<hr>
+<!-- ##### Testimonials Area Start ##### -->
+<section class="south-testimonials-area section-padding-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
+                    <h2>Depoimentos</h2>
+                    <p>Confira abaixo depoimentos de alguns de nossos clientes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="testimonials-slides owl-carousel wow fadeInUp" data-wow-delay="500ms">
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="single-testimonial-slide text-center">
+                        <h5>Achei o que procurava</h5>
+                        <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus
+                            blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am
+                            et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic
+                            iturut magna.</p>
+
+                        <div class="testimonial-author-info">
+                            <img src="/assets/img/bg-img/feature6.jpg" alt="">
+                            <p>Jair, <span>Cliente</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="single-testimonial-slide text-center">
+                        <h5>Eu e minha família estamos muito felizes</h5>
+                        <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus
+                            blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am
+                            et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic
+                            iturut magna.</p>
+
+                        <div class="testimonial-author-info">
+                            <img src="/assets/img/bg-img/feature6.jpg" alt="">
+                            <p>Renata, <span>Cliente</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Single Testimonial Slide -->
+                    <div class="single-testimonial-slide text-center">
+                        <h5>Muito bom, recomendo</h5>
+                        <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus
+                            blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am
+                            et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic
+                            iturut magna.</p>
+
+                        <div class="testimonial-author-info">
+                            <img src="/assets/img/bg-img/feature6.jpg" alt="">
+                            <p>João, <span>Cliente</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Testimonials Area End ##### -->
+
+<!-- ##### Editor Area Start ##### -->
+<section class="south-editor-area d-flex align-items-center" id="contact">
+    <!-- Editor Content -->
+    <div class="editor-content-area">
+        <!-- Section Heading -->
+        <div class="section-heading wow fadeInUp" data-wow-delay="250ms">
+            <img src="/assets/img/icons/prize.png" alt="">
+            <h2>Seu Nome aqui</h2>
+            <p>Corretor</p>
+        </div>
+        <p class="wow fadeInUp" data-wow-delay="500ms">(colocar uma breve descrição) <br> Etiam nec odio vestibulum
+            est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odiomattis effic iturut
+            magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est
+            mat tis effic iturut magna. Curabitur rhoncus auctor eleifend. Fusce venenatis diam urna, eu pharetra
+            arcu varius ac. Etiam cursus turpis lectus, id iaculis risus tempor id. Phasellus fringilla nisl sed
+            sem scelerisque, eget aliquam magna vehicula.</p>
+        <div class="address wow fadeInUp" data-wow-delay="750ms">
+            <h6><img src="/assets/img/icons/phone-call.png" alt=""><a href="https://api.whatsapp.com/send?phone=5513988844019&text=Olá amigo, encontrei seu contato através de seu site!"
+                    target="_blank">(13) 9-8884-4019</a></h6>
+            <h6><img src="/assets/img/icons/envelope.png" alt=""> <a href="mailto:contato@meuemail.com">contato@meuemail.com</a></h6>
+        </div>
+    </div>
+
+    <!-- Editor Thumbnail -->
+    <div class="editor-thumbnail">
+        <img src="/assets/img/bg-img/corretor.jpg" alt="">
+    </div>
+</section>
+<!-- ##### Editor Area End ##### -->
+
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer-area">
+    <!-- Main Footer Area -->
+
+    <!-- Copywrite Text -->
+    <div class="copywrite-text d-flex align-items-center justify-content-center">
+      
+    </div>
+</footer>
+<!-- ##### Footer Area End ##### -->
+</body>
+<style>
+    .card-imovel{
+        cursor: pointer
+    }
+</style>
+
+ <!-- jQuery (Necessary for All JavaScript Plugins) -->
+ <script src="/assets/js/jquery/jquery-2.2.4.min.js"></script>
+ <!-- Popper js -->
+ <script src="/assets/js/popper.min.js"></script>
+ <!-- Bootstrap js -->
+ <script src="/assets/js/bootstrap.min.js"></script>
+ <!-- Plugins js -->
+ <script src="/assets/js/plugins.js"></script>
+ <script src="/assets/js/classy-nav.min.js"></script>
+ <!-- Active js -->
+ <script src="/assets/js/active.js"></script>
+ <script src="/assets/js/main.js"></script>
+</html>

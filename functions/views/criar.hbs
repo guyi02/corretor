@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Painel administrativo</title>
+    <link rel="stylesheet" type='text/css' href="../styles.css">
+</head>
+
+<body>
+
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="h-100 d-md-flex justify-content-between align-items-center">
+
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <section class="featured-properties-area section-padding-100-50">
+        <div class="container">
+            <div class="row">
+                <span style="background-color:#947054; padding:10px"><a style="color: #fff" href="/painel">Voltar</a></span>
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp">
+                        <h2>Cadastrar Produtos</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ##### Advance Search Area Start ##### -->
+        <div class="south-search-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="advanced-search-form">
+
+                            <!-- Search Title -->
+                            <div class="search-title">
+                                <p>Preencha os campos abaixo</p>
+                            </div>
+                            <!-- Search Form -->
+                            <form action="#" method="post" id="advanceSearch">
+                                <div class="row">
+
+                                    <div class="col-12 col-md-4 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="input" class="form-control" name="titulo" placeholder="Titulo">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <select name="cidade" class="form-control" id="cities">
+                                                <option value="" disabled selected> Selecione a cidade</option>
+                                                <option value="Santos">Santos</option>
+                                                <option value="São Vicente">São Vicente</option>
+                                                <option value="Praia Grande">Praia Grande</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <select name="quartos" class="form-control" id="cities">
+                                                <option value="" disabled selected> Quantidade quartos</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-lg-6">
+                                        <div class="form-group">
+                                            <input type="input" class="form-control" name="localidade" placeholder="Endereço">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-lg-2">
+                                        <div class="form-group">
+                                            <select name="banheiros" class="form-control" id="cities">
+                                                <option value="" disabled selected>Banheiros</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-12 col-md-4 col-xl-2">
+                                        <div class="form-group">
+                                            <select class="form-control" name="garagens" id="bedrooms">
+                                                <option value="" disabled selected>Garagens</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-xl-2">
+                                        <div class="form-group">
+                                            <select class="form-control" name="suite" id="bedrooms">
+                                                <option value="" disabled selected>Suite</option>
+                                                <option value="sim">Sim</option>
+                                                <option value="não">Não</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-xl-3">
+                                        <div class="form-group">
+                                            <select class="form-control" name="locacao" id="bathrooms">
+                                                <option value="" disabled selected>Tipo de Locação</option>
+                                                <option value="aluguel">Aluguel</option>
+                                                <option value="compra">Compra</option>
+                                                <option value="outros">Outros</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-xl-2">
+                                        <div class="form-group">
+                                            <input type="input" class="form-control" name="dimensoes" placeholder="Dimensões">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" name="valor" placeholder="Valor">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-12 col-lg-12 d-flex mb-5">
+                                        <textarea name="descricao" id="descricao" cols="200" rows="10" placeholder="Descrição"></textarea>
+                                    </div>
+
+                                    <div class="col-12 col-md-12">
+                                        <input type="input" class="form-control" name="imagemCapa" placeholder="Imagem de capa">
+                                    </div>
+
+                                    <div class="col-12 col-md-12">
+                                        <input type="input" class="form-control" name="imagem1" placeholder="Imagem 1">
+                                    </div>
+
+                                     <div class="col-12 col-md-12">
+                                        <input type="input" class="form-control" name="imagem2" placeholder="Imagem 2">
+                                    </div>
+
+                                    <div class="col-12 col-md-12">
+                                        <input type="input" class="form-control" name="imagem3" placeholder="Imagem 3">
+                                    </div>
+
+                                    <div class="col-12 col-md-12">
+                                        <input type="input" class="form-control" name="imagem4" placeholder="Imagem 4">
+                                    </div>
+
+                                    <div class="col-12 col-md-12">
+                                        <input type="input" class="form-control" name="imagem5" placeholder="Imagem 5">
+                                    </div>
+
+                                    <div class="col-12 col-md-12">
+                                        <input type="input" class="form-control" name="imagem6" placeholder="Imagem 6">
+                                    </div>
+
+
+
+                                    <div class="col-12 d-flex justify-content-between align-items-end">
+                                        <!-- More Filter -->
+                                        <div class="more-filter">
+
+                                        </div>
+                                        <!-- Submit -->
+                                        <div class="form-group mb-0">
+                                            <button type="submit" class="btn south-btn">Cadastrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

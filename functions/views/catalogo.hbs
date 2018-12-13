@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nação Imóveis - seu site de corretor na baixada santista</title>
+    <base href="/">
+    <!-- Style CSS -->
+    <link rel="stylesheet" type='text/css' href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+</head>
+
+<body>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="h-100 d-md-flex justify-content-between align-items-center">
+                <div class="email-address">
+                    <a href="mailto:contato@meuemail.com">contato@meuemail.com</a>
+                </div>
+                <div class="phone-number d-flex">
+                    <div class="icon">
+                        <img src="/assets/img/icons/phone-call.png" alt="">
+                    </div>
+                    <div class="number">
+                        <a href="https://api.whatsapp.com/send?phone=5513991122174&text=Olá amigo, encontrei seu contato através de seu site!"
+                            target="_blank">(13) 9-99111-1111</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header Area -->
+        <div class="main-header-area" id="stickyHeader">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="southNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/"><img src="/assets/img/core-img/nacao-logo-2.png" width="120" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/catalogo">Catálogo</a></li>
+                            </ul>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <section class="breadcumb-area bg-img" style="background-image: url(/assets/img/bg-img/hero1.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content">
+                        <h3 class="breadcumb-title">Catálogo</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Advance Search Area Start ##### -->
+    <div class="south-search-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="advanced-search-form">
+                        <!-- Search Title -->
+                        <div class="search-title">
+                            <p>Pesquise abaixo</p>
+                        </div>
+                        <!-- Search Form -->
+                        <form action="/pesquisa" method="post" id="advanceSearch">
+                            <div class="row">
+
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <select name="cidade" class="form-control" id="cities">
+                                            <option selected>Cidade</option>
+                                            <option value="santos">Santos</option>
+                                            <option value="sao-vicente">Sao Vicente</option>
+                                            <option value="bertioga">Bertioga</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <select class="form-control" id="catagories">
+                                            <option>Qtd Quartos</option>
+                                            <option>Apartment</option>
+                                            <option>Bar</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <select class="form-control" id="offers">
+                                            <option>Qtd Banheiros</option>
+                                            <option>100% OFF</option>
+                                            <option>75% OFF</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-xl-3">
+                                    <div class="form-group">
+                                        <select class="form-control" id="listings">
+                                            <option>All Listings</option>
+                                            <option>Listings 1</option>
+                                            <option>Listings 2</option>
+                                            <option>Listings 3</option>
+                                            <option>Listings 4</option>
+                                            <option>Listings 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-xl-2">
+                                    <div class="form-group">
+                                        <select class="form-control" id="bedrooms">
+                                            <option>Bedrooms</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5+</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-xl-2">
+                                    <div class="form-group">
+                                        <select class="form-control" id="bathrooms">
+                                            <option>Bathrooms</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5+</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-8 col-lg-12 col-xl-5 d-flex">
+                                    <!-- Space Range -->
+                                    <div class="slider-range">
+                                        <div data-min="120" data-max="820" data-unit=" sq. ft" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                                            data-value-min="120" data-value-max="820">
+                                            <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
+                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                                        </div>
+                                        <div class="range">120 sq. ft - 820 sq. ft</div>
+                                    </div>
+
+                                    <!-- Distance Range -->
+                                    <div class="slider-range">
+                                        <div data-min="10" data-max="1300" data-unit=" mil" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                                            data-value-min="10" data-value-max="1300">
+                                            <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
+                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"></span>
+                                        </div>
+                                        <div class="range">10 mil - 1300 mil</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 search-form-second-steps">
+                                    <div class="row">
+
+                                        <div class="col-12 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <select class="form-control" id="types">
+                                                    <option>All Types</option>
+                                                    <option>Apartment <span>(30)</span></option>
+                                                    <option>Land <span>(69)</span></option>
+                                                    <option>Villas <span>(103)</span></option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <select class="form-control" id="catagories2">
+                                                    <option>All Catagories</option>
+                                                    <option>Apartment</option>
+                                                    <option>Bar</option>
+                                                    <option>Farm</option>
+                                                    <option>House</option>
+                                                    <option>Store</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <select class="form-control" id="Actions">
+                                                    <option>All Actions</option>
+                                                    <option>Sales</option>
+                                                    <option>Booking</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <select class="form-control" id="city2">
+                                                    <option>All City</option>
+                                                    <option>City 1</option>
+                                                    <option>City 2</option>
+                                                    <option>City 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <div class="form-group">
+                                                <select class="form-control" id="Actions3">
+                                                    <option>All Actions</option>
+                                                    <option>Sales</option>
+                                                    <option>Booking</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <div class="form-group">
+                                                <select class="form-control" id="city3">
+                                                    <option>All City</option>
+                                                    <option>City 1</option>
+                                                    <option>City 2</option>
+                                                    <option>City 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <div class="form-group">
+                                                <select class="form-control" id="city5">
+                                                    <option>All City</option>
+                                                    <option>City 1</option>
+                                                    <option>City 2</option>
+                                                    <option>City 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex justify-content-between align-items-end">
+                                    <!-- More Filter -->
+                                    <div class="more-filter">
+
+                                    </div>
+                                    <!-- Submit -->
+                                    <div class="form-group mb-0">
+                                        <button type="submit" class="btn south-btn">Buscar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Advance Search Area End ##### -->
+
+    <!-- ##### Listing Content Wrapper Area Start ##### -->
+    <section class="listings-content-wrapper section-padding-100">
+        <div class="container">
+
+            <div class="row">
+                {{#each imoveis}}
+                <!-- Single Featured Property -->
+                <div class="col-12 col-md-6 col-xl-4 card-imovel">
+                    <a href="/imovel/{{id}}">
+                    <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="200ms">
+                        <!-- Property Thumbnail -->
+                        <div class="property-thumb">
+                            <img src="/assets/img/bg-img/casa_corretor.jpg" alt="">
+
+                            <div class="tag">
+                                <span>{{this.locacao}}</span>
+                            </div>
+                            <div class="list-price">
+                                <p>R$ {{this.valor}}</p>
+                            </div>
+                        </div>
+                        <!-- Property Content -->
+                        <div class="property-content">
+                            <h5>{{this.titulo}}</h5>
+                            <p class="location"><img src="/assets/img/icons/home3.png" alt="">{{this.localidade}}</p>
+                            <p class="location"><img src="/assets/img/icons/dormitorios.png" alt="">Dorm. {{this.quartos}}</p>
+                             <p class="location">Suite: sim</p>
+                            <p>{{{truncate "30" this.descricao}}}</p>
+                            <div class="property-meta-data d-flex align-items-end justify-content-between">
+                                <div class="bathroom">
+                                    <img src="/assets/img/icons/bathtub.png" alt="">
+                                    <span>{{this.banheiros}}</span>
+                                </div>
+                                <div class="garage">
+                                    <img src="/assets/img/icons/garage.png" alt="">
+                                    <span>{{this.garagens}}</span>
+                                </div>
+                                <div class="space">
+                                    <img src="/assets/img/icons/space.png" alt="">
+                                    <span>{{this.dimensoes}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+                {{/each}}
+        </div>
+    </section>
+    <!-- ##### Listing Content Wrapper Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area" style="background-image: url(/assets/img/bg-img/cta.jpg);">
+        <!-- Main Footer Area -->
+
+        <!-- Copywrite Text -->
+        <div class="copywrite-text d-flex align-items-center justify-content-center">
+            
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+</body>
+
+<style>
+    .card-imovel{
+        cursor: pointer
+    }
+</style>
+
+<!-- jQuery (Necessary for All JavaScript Plugins) -->
+<script src="/assets/js/jquery/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="/assets/js/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="/assets/js/bootstrap.min.js"></script>
+<!-- Plugins js -->
+<script src="/assets/js/plugins.js"></script>
+<script src="/assets/js/classy-nav.min.js"></script>
+<!-- Active js -->
+<script src="/assets/js/active.js"></script>
+<script src="/assets/js/main.js"></script>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Painel administrativo</title>
+    <link rel="stylesheet" type='text/css' href="../styles.css">
+</head>
+
+<body>
+
+
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="h-100 d-md-flex justify-content-between align-items-center">
+                <div class="email-address">
+                    <a href="mailto:contato@meuemail.com">contato@meuemail.com</a>
+                </div>
+                <div class="phone-number d-flex">
+                    <div class="icon">
+                        <img src="../assets/img/icons/phone-call.png" alt="">
+                    </div>
+                    <div class="number">
+                        <a href="https://api.whatsapp.com/send?phone=5513991122174&text=Olá amigo, encontrei seu contato através de seu site!"
+                            target="_blank">(13) 9-99111-1111</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header Area -->
+        <div class="main-header-area" id="stickyHeader">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="southNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="/"><img src="/assets/img/core-img/nacao-logo-2.png" width="120" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/catalogo">Catálogo</a></li>
+                            </ul>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Breadcumb Area Start ##### -->
+    <section class="breadcumb-area bg-img" style="background-image: url(../assets/img/bg-img/hero1.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content">
+                        <h3 class="breadcumb-title">Detalhes do imóvel</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Breadcumb Area End ##### -->
+
+
+    <!-- ##### Listings Content Area Start ##### -->
+    <section class="listings-content-wrapper section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Single Listings Slides -->
+                    <div class="single-listings-sliders owl-carousel">
+                        {{#each imovel.imagens}}
+                        <img src="{{this}}" alt="">
+                        {{/each}}                        
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="listings-content">
+                        <!-- Price -->
+                        <div class="list-price">
+                            <p>R$ {{imovel.valor}}</p>
+                        </div>
+                        <h5>{{imovel.titulo}}</h5>
+                        <p class="location"><img src="img/icons/location.png" alt="">{{imovel.descricao}}</p>
+                        <!-- Meta -->
+                        <div class="property-meta-data d-flex align-items-end">
+                            <div class="space">
+                                <img src="../assets/img/icons/space.png" alt="">
+                                <span>{{imovel.dimensoes}}</span>
+                            </div>
+                            <div class="bathroom">
+                                <img src="../assets/img/icons/bathtub.png" alt="">
+                                <span>{{imovel.banheiros}}</span>
+                            </div>
+                             
+                            <div class="garage">
+                                <img src="../assets/img/icons/garage.png" alt="">
+                                <span>{{imovel.garagens}}</span>
+                            </div>
+                            <div class="bathroom">
+                                <img src="../assets/img/icons/dormitorios.png" alt="" width="10" height="10">
+                                <span>Dorm. {{imovel.quartos}}</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="contact-realtor-wrapper">
+                        <div class="realtor-info">
+                            <img src="../assets/img/bg-img/corretor.jpg" alt="">
+                            <div class="realtor---info">
+                                <h2>Seu nome aqui</h2>
+                                <p>Corretor</p>
+                                <h6><img src="../assets/img/icons/phone-call.png" alt=""><a href="https://api.whatsapp.com/send?phone=5513991122174&text=Olá amigo, encontrei seu contato através de seu site!"
+                                        target="_blank">(13) 9-99111-1111</a></h6>
+                                <h6><img src="../assets/img/icons/envelope.png" alt=""> <a href="mailto:contato@meuemail.com">contato@meuemail.com</a></h6>
+                            </div>
+                            <div class="realtor--contact-form">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Listings Content Area End ##### -->
+
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area" style="background-image: url(../assets/img/bg-img/cta.jpg);">
+        <!-- Main Footer Area -->
+
+        <!-- Copywrite Text -->
+        <div class="copywrite-text d-flex align-items-center justify-content-center">
+
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+</body>
+
+<!-- jQuery (Necessary for All JavaScript Plugins) -->
+<script src="../assets/js/jquery/jquery-2.2.4.min.js"></script>
+<!-- Popper js -->
+<script src="../assets/js/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<!-- Plugins js -->
+<script src="../assets/js/plugins.js"></script>
+<script src="../assets/js/jquery-ui.min.js"></script>
+<script src="../assets/js/classy-nav.min.js"></script>
+
+<!-- Active js -->
+<script src="../assets/js/active.js"></script>
+
+</html>

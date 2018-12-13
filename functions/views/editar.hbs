@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Painel administrativo</title>
+    <link rel="stylesheet" type='text/css' href="../../styles.css">
+</head>
+
+<body>
+
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="h-100 d-md-flex justify-content-between align-items-center">
+                <div class="email-address">
+                    <a href="">Voltar para o site</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <section class="featured-properties-area section-padding-100-50">
+        <div class="container">
+            <div class="row">
+                <span style="background-color:#947054; padding:10px"><a style="color: #fff" href="/painel">Voltar</a></span>
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp">
+                        <h2>Editar Produtos {{user}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ##### Advance Search Area Start ##### -->
+        <div class="south-search-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="advanced-search-form">
+
+                            <!-- Search Title -->
+                            <div class="search-title">
+                                <p>Edite os campos abaixo</p>
+                            </div>
+                            <!-- Search Form -->
+                            <form action="#" method="post" id="advanceSearch">
+                                <div class="row">
+
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <input type="input" class="form-control" name="titulo" placeholder="Titulo"
+                                                value="{{imovel.titulo}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <select name="cidade" class="form-control" id="cities">
+                                                <option value="{{imovel.cidade}}" selected> {{imovel.cidade}}</option>
+                                                <option>Santos</option>
+                                                <option>São Vicente</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <select name="quartos" class="form-control" id="cities">
+                                                <option value="{{imovel.quartos}}" selected> {{imovel.quartos}}</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <select name="banheiros" class="form-control" id="cities">
+                                                <option value="{{imovel.banheiros}}" selected> {{imovel.banheiros}}</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <input type="input" class="form-control" name="localidade" placeholder="Localidade"
+                                                value="{{imovel.localidade}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-xl-2">
+                                        <div class="form-group">
+                                            <select name="garagens" class="form-control" id="bedrooms">
+                                                <option value="{{imovel.garagens}}" disabled selected>{{imovel.garagens}}</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-xl-2">
+                                        <div class="form-group">
+                                            <select name="locacao" class="form-control" id="bathrooms">
+                                                <option value="{{imovel.locacao}}" disabled selected>{{imovel.locacao}}</option>
+                                                <option value="aluguel">Aluguel</option>
+                                                <option value="compra">Compra</option>
+                                                <option value="outros">Outros</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-xl-2">
+                                        <div class="form-group">
+                                            <input type="input" class="form-control" name="dimensoes" value="{{imovel.dimensoes}}"
+                                                placeholder="Dimensões">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-4 col-lg-3">
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" name="valor" value="{{imovel.valor}}"
+                                                placeholder="Valor">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-12 col-lg-12 d-flex mb-5">
+                                        <textarea name="descricao" id="descricao" cols="200" rows="10" placeholder="Descrição">{{imovel.descricao}}</textarea>
+                                    </div>
+
+                                    <div class="col-12 d-flex justify-content-between align-items-end">
+                                        <div class="more-filter"></div>
+                                        <!-- Submit -->
+                                        <div class="form-group mb-0">
+                                            <button type="submit" class="btn south-btn">Editar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

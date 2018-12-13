@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Painel administrativo</title>
+    <link rel="stylesheet" type='text/css' href="styles.css">
+</head>
+
+<style>
+    .btn-remove{
+  background-color:#fff;
+  color: red;
+  border: none;
+  cursor: pointer;
+}
+</style>
+
+<body>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="h-100 d-md-flex justify-content-between align-items-center">
+                <div class="email-address">
+                    <a href="/">Voltar para o site</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="featured-properties-area section-padding-100-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading wow fadeInUp">
+                        <h2>Imóveis cadastrados</h2>
+                        <a class="btn south-btn m-1" href="/painel/criar">Novo cadastro</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                {{#each imoveis}}
+                <!-- Single Featured Property -->
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="single-featured-property mb-50 wow fadeInUp" data-wow-delay="100ms">
+                        <!-- Property Thumbnail -->
+                        <div class="property-thumb">
+                            <img src="{{this.imagemCapa}}" alt="">
+                        </div>
+                        <!-- Property Content -->
+                        <div class="property-content">
+                            <h5>{{this.titulo}}</h5>
+                            <p class="location"><img src="/assets/img/icons/location.png" alt="">{{this.localidade}}</p>
+                            <p>{{{truncate "30" this.descricao}}}</p>
+                            <div class="property-meta-data d-flex align-items-end justify-content-between">
+                                <!--Btn esq -->
+                                <div class="bathroom">
+                                    <a href="#">Verificar</a>
+                                </div>
+                                <!--Btn meio -->
+                                <div class="garage">
+                                    <a href="/painel/editar/{{this.ids}}">Editar</a>
+                                </div>
+                                <!--Btn dir -->
+                                <div class="space">
+                                    <form action="/painel/delete/{{this.ids}}" method="post">
+                                        <button class="btn-remove" type="submit">Deletar</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{/each}}
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
